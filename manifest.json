@@ -1,0 +1,20 @@
+// manifest.json
+{
+  "manifest_version": 2,
+  "name": "NY Times Trump Filter",
+  "version": "1.0",
+  "description": "Filters NYT articles on Trump and his minions",
+  "permissions": [
+    "*://www.nytimes.com/*",
+    "storage"
+  ],
+  "options_ui": {
+    "page": "options.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://www.nytimes.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
